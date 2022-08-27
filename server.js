@@ -1,7 +1,7 @@
 const fastify = require('fastify')({logger:true})
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
-const uri = process.env.URI;
+const uri = 'mongodb+srv://umar43202:ibonkpze123@cluster0.981sbsx.mongodb.net/?retryWrites=true&w=majority';
 const client  = new MongoClient(uri);
 
 
@@ -38,7 +38,7 @@ async function run(){
 
 run().catch(console.dir);
 
-fastify.listen({port: PORT},(err,address) => {
+fastify.listen({port: PORT},async (err,address) => {
     if(err){
         fastify.log.error(err)
         process.exit(1);
