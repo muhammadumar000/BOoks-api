@@ -1,7 +1,7 @@
 const fastify = require('fastify')({logger:true})
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
-const uri = process.env.URI;
+const uri = 'mongodb+srv://umar43202:ibonkpze123@cluster0.981sbsx.mongodb.net/?retryWrites=true&w=majority';
 const client  = new MongoClient(uri);
 
 
