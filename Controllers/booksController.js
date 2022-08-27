@@ -1,7 +1,7 @@
 
 require("dotenv").config();
 const { MongoClient } = require("mongodb");
-const uri = 'mongodb+srv://umar43202:ibonkpze123@cluster0.981sbsx.mongodb.net/?retryWrites=true&w=majority';
+const uri = process.env.URI;
 const client = new MongoClient(uri);
 
 // get all books ...
