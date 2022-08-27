@@ -14,7 +14,7 @@ fastify.register(require('@fastify/swagger'),{
     }
 })
 
-fastify.register(require('./routes/booksRoute'))
+fastify.register(require('./Routes/booksRoute'))
 
 const PORT = process.env.PORT || 3000;
 
