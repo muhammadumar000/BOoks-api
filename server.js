@@ -30,10 +30,10 @@ async function run(){
         await client.db("admin").command({ ping: 1 });
         // insert a document 
         console.log("Connected successfully to server");
-      } finally {
+    } finally {
         // Ensures that the client will close when you finish/error
         await client.close();
-      }
+    }
 }
 
 run().catch(console.dir);
