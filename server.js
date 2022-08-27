@@ -38,7 +38,7 @@ async function run(){
 
 run().catch(console.dir);
 
-fastify.listen({port: PORT},async (err,address) => {
+fastify.listen({port: PORT,host:'0.0.0.0'},async (err,address) => {
     if(err){
         fastify.log.error(err)
         process.exit(1);
